@@ -1,0 +1,15 @@
+{
+  "device": "DEV-A", "date": "20260804",
+  "guideline_summary": "엔드포인트 명시 시에만 상 등급, UI 테스트 제외.",
+  "mappings": [
+    {"api_id":"API-001","api_method":"GET","api_path":"/v1/device/status","api_summary":"장치 상태 조회","spec_anchor":"3.1",
+     "tests":[
+       {"test_id":"TC-100","test_title":"장치상태 정상 조회","test_anchor":"row2","confidence":"상","rationale":"'장치상태 정상 조회'가 사양서 3.1 '장치 상태 조회'와 동작 일치","guideline_refs":["1"]},
+       {"test_id":"TC-101","test_title":"장치상태 비정상 응답","test_anchor":"row3","confidence":"중","rationale":"엔드포인트 명시 없음","guideline_refs":["1"]}
+     ]},
+    {"api_id":"API-002","api_method":"POST","api_path":"/v1/device/firmware","api_summary":"펌웨어 업로드","spec_anchor":"3.2",
+     "tests":[{"test_id":"TC-200","test_title":"펌웨어 파일 업로드","test_anchor":"row4","confidence":"상","rationale":"명칭 직접 대응","guideline_refs":["1"]}]}
+  ],
+  "unmapped_apis": [],
+  "unmapped_tests": []
+}
